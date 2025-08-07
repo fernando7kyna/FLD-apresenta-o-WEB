@@ -1,0 +1,1070 @@
+/* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
+
+/* Reset CSS para garantir consistência entre navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Configuração de scroll suave para navegação interna */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilos base do corpo da página */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  border-top: 0.1px solid #111; /* Borda sutil no topo */
+}
+
+/* ===== HEADER E NAVEGAÇÃO ===== */
+
+/* Header fixo com efeito de vidro (glassmorphism) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+  background-color: rgba(26, 58, 74, 0.8); /* Azul escuro semi-transparente */
+  backdrop-filter: blur(10px); /* Efeito de desfoque para glassmorphism */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+/* Container do logo com tagline */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo principal */
+.logo-fld {
+  width: 120px;
+  height: auto;
+}
+
+/* Tagline com animação de brilho */
+.logo-tagline {
+  color: #00ffff; /* Ciano vibrante */
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 5px;
+  text-align: center;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.8); /* Efeito de brilho */
+  letter-spacing: 1px;
+  animation: taglinePulse 2s ease-in-out infinite; /* Animação contínua */
+}
+
+/* Animação de pulsação para o tagline */
+@keyframes taglinePulse {
+  0%, 100% {
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+  }
+  50% {
+    text-shadow: 0 0 25px rgba(0, 255, 255, 1), 0 0 35px rgba(0, 255, 255, 0.6);
+  }
+}
+
+/* Menu de navegação */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+/* Menu hambúrguer (inicialmente oculto) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+/* Linhas do menu hambúrguer */
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #00ffff;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Animação do hambúrguer quando ativo */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Links de navegação */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* Efeito hover nos links de navegação */
+nav a:hover {
+  color: #00ffff;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+  transform: scale(1.05);
+}
+
+/* ===== SEÇÃO BANNER ===== */
+
+/* Banner principal com altura total da viewport */
+.banner {
+  position: relative;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px 0 20px; /* Padding top para compensar header fixo */
+}
+
+/* Conteúdo do banner */
+.banner-content {
+  flex: 1;
+}
+
+/* Avatar no banner com posicionamento absoluto */
+.avatar-banner {
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+  height: 70%;
+  max-height: 400px;
+  width: auto;
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+/* Título principal do banner */
+.banner h1 {
+  font-size: 64px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+  letter-spacing: 2px;
+}
+
+/* Subtítulo do banner */
+.banner p {
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
+/* Botão de call-to-action */
+.btn {
+  padding: 15px 30px;
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+/* Efeito hover no botão */
+.btn:hover {
+  background-color: #0198a2;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a3a4a;
+  color: #fff;
+}
+
+/* ===== ANIMAÇÕES ===== */
+
+/* Classe para animação de entrada suave */
+.imagem-animada {
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  animation: entradaSuave 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Animação de entrada suave */
+@keyframes entradaSuave {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===== VÍDEO DE BACKGROUND ===== */
+
+/* Vídeo de fundo fixo */
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* Fica atrás de todo o conteúdo */
+  pointer-events: none; /* Não interfere com interações */
+}
+
+/* ===== SEÇÃO SOBRE ===== */
+
+/* Seção sobre com fundo semi-transparente */
+.sobre {
+  padding: 80px 10%;
+  background: rgba(26, 58, 74, 0.9);
+  color: white;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* Animação de entrada da seção sobre */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Container para centralizar conteúdo */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título da seção sobre */
+.sobre h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #00ffff;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* Animação de brilho pulsante */
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.6);
+  }
+}
+
+/* Layout do conteúdo sobre */
+.sobre-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Texto da seção sobre */
+.sobre-texto {
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Parágrafos da seção sobre */
+.sobre-texto p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* ===== SEÇÃO DE HABILIDADES ===== */
+
+/* Container das habilidades */
+.habilidades {
+  margin-top: 50px;
+}
+
+/* Título das habilidades */
+.habilidades h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #00ffff;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+/* Categoria de habilidades */
+.skills-category {
+  margin-bottom: 40px;
+}
+
+/* Título da categoria */
+.skills-category h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  text-align: center;
+}
+
+/* Grid responsivo para as habilidades */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Item individual de habilidade */
+.skill-item {
+  background: rgba(0, 188, 212, 0.2);
+  border: 2px solid #00bcd4;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+/* Efeito hover nas habilidades */
+.skill-item:hover {
+  background: rgba(0, 188, 212, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
+}
+
+/* ===== ÍCONES SOCIAIS ===== */
+
+/* Container dos ícones sociais fixos */
+.social-icons {
+  position: fixed;
+  left: 20px;
+  top: 30%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+/* Ícone social individual */
+.social-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(26, 58, 74, 0.9);
+  border: 2px solid #00ffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00ffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+/* SVG dentro dos ícones sociais */
+.social-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Efeito hover geral nos ícones sociais */
+.social-icon:hover {
+  background: rgba(0, 188, 212, 0.3);
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+  color: #fff;
+}
+
+/* Efeitos hover específicos por rede social */
+.social-icon.linkedin:hover {
+  border-color: #0077b5;
+  box-shadow: 0 0 25px rgba(0, 119, 181, 0.6);
+}
+
+.social-icon.whatsapp:hover {
+  border-color: #25d366;
+  box-shadow: 0 0 25px rgba(37, 211, 102, 0.6);
+}
+
+.social-icon.email:hover {
+  border-color: #ea4335;
+  box-shadow: 0 0 25px rgba(234, 67, 53, 0.6);
+}
+
+/* ===== SEÇÃO DE CONTATOS ===== */
+
+/* Seção de contatos */
+.contatos {
+  padding: 80px 10%;
+  background: rgba(26, 58, 74, 0.95);
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+/* Título da seção de contatos */
+.contatos h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #00ffff;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* Layout dos contatos */
+.contatos-content {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* Item individual de contato */
+.contato-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(0, 188, 212, 0.1);
+  border: 2px solid #00bcd4;
+  border-radius: 15px;
+  padding: 25px;
+  min-width: 300px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+/* Efeito hover nos itens de contato */
+.contato-item:hover {
+  background: rgba(0, 188, 212, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
+}
+
+/* Ícone do contato */
+.contato-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 188, 212, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00ffff;
+  flex-shrink: 0;
+}
+
+/* SVG dentro do ícone de contato */
+.contato-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Informações do contato */
+.contato-info h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.contato-info p {
+  font-size: 16px;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* ===== SEÇÃO DE PROJETOS ===== */
+
+/* Seção de projetos */
+.projetos {
+  padding: 80px 10%;
+  background: rgba(26, 58, 74, 0.85);
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+/* Título da seção de projetos */
+.projetos h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #00ffff;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* Layout dos projetos */
+.projetos-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Item individual de projeto */
+.projeto-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: rgba(0, 188, 212, 0.1);
+  border: 2px solid #00bcd4;
+  border-radius: 15px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+/* Efeito hover nos projetos */
+.projeto-item:hover {
+  background: rgba(0, 188, 212, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
+}
+
+/* Ícone do projeto */
+.projeto-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 188, 212, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00ffff;
+  flex-shrink: 0;
+}
+
+/* SVG dentro do ícone do projeto */
+.projeto-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Informações do projeto */
+.projeto-info {
+  flex: 1;
+}
+
+/* Título do projeto */
+.projeto-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Descrição do projeto */
+.projeto-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Tags de tecnologias */
+.projeto-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Tag individual de tecnologia */
+.tech-tag {
+  background: rgba(0, 188, 212, 0.3);
+  border: 1px solid #00bcd4;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 12px;
+  color: #00ffff;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* Efeito hover nas tags */
+.tech-tag:hover {
+  background: rgba(0, 188, 212, 0.5);
+  transform: scale(1.05);
+}
+
+/* Ações do projeto */
+.projeto-actions {
+  margin-top: 15px;
+}
+
+/* Botão do projeto */
+.btn-projeto {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 188, 212, 0.3);
+  border: 2px solid #00bcd4;
+  border-radius: 25px;
+  padding: 10px 20px;
+  color: #00ffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+/* SVG dentro do botão do projeto */
+.btn-projeto svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Efeito hover no botão do projeto */
+.btn-projeto:hover {
+  background: rgba(0, 188, 212, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+  color: #fff;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+/* ===== TABLETS (768px - 1024px) ===== */
+@media screen and (max-width: 1024px) {
+  /* Ajustes no banner para tablets */
+  .banner {
+    flex-direction: column;
+    padding: 60px 15px 0 15px;
+  }
+  
+  .banner h1 {
+    font-size: 56px;
+  }
+  
+  .banner p {
+    font-size: 20px;
+  }
+  
+  .avatar-banner {
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+  }
+  
+  /* Ajustes de padding nas seções */
+  .sobre, .projetos, .contatos {
+    padding: 60px 5%;
+  }
+  
+  /* Grid de habilidades mais compacto */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  /* Espaçamento entre projetos */
+  .projetos-content {
+    gap: 25px;
+  }
+  
+  /* Espaçamento entre contatos */
+  .contatos-content {
+    gap: 40px;
+  }
+  
+  /* Ajustes nos ícones sociais */
+  .social-icons {
+    left: 15px;
+    gap: 12px;
+  }
+  
+  .social-icon {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* ===== MOBILE (480px - 767px) ===== */
+@media screen and (max-width: 767px) {
+  /* Header mobile com menu hambúrguer */
+  header {
+    padding: 8px 5%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Mostrar menu hambúrguer */
+  .hamburger {
+    display: flex;
+  }
+  
+  /* Menu mobile com animação */
+  .nav-menu {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: rgba(26, 58, 74, 0.95);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+    gap: 30px;
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+  
+  /* Menu ativo */
+  .nav-menu.active {
+    left: 0;
+  }
+  
+  /* Animação dos itens do menu */
+  .nav-menu li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+  }
+  
+  .nav-menu.active li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Delays para animação sequencial */
+  .nav-menu li:nth-child(1) { transition-delay: 0.1s; }
+  .nav-menu li:nth-child(2) { transition-delay: 0.2s; }
+  .nav-menu li:nth-child(3) { transition-delay: 0.3s; }
+  .nav-menu li:nth-child(4) { transition-delay: 0.4s; }
+  
+  /* Logo menor para mobile */
+  .logo-fld {
+    width: 100px;
+  }
+  
+  .logo-tagline {
+    font-size: 12px;
+  }
+  
+  /* Ajustes na navegação */
+  nav ul {
+    gap: 15px;
+  }
+  
+  nav a {
+    font-size: 14px;
+  }
+  
+  /* Banner mobile */
+  .banner {
+    height: auto;
+    min-height: 100vh;
+    padding: 80px 10px 20px 10px;
+  }
+  
+  .banner h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+  }
+  
+  .banner p {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  
+  .avatar-banner {
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+  }
+  
+  /* Botão mobile */
+  .btn {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+  
+  /* Padding das seções para mobile */
+  .sobre, .projetos, .contatos {
+    padding: 50px 3%;
+  }
+  
+  /* Títulos menores para mobile */
+  .sobre h2, .projetos h2, .contatos h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  /* Texto da seção sobre */
+  .sobre-texto p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Títulos das habilidades */
+  .habilidades h3 {
+    font-size: 22px;
+  }
+  
+  .skills-category h4 {
+    font-size: 18px;
+  }
+  
+  /* Grid de habilidades mais compacto */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+  }
+  
+  .skill-item {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+  
+  /* Projetos em coluna para mobile */
+  .projetos-content {
+    gap: 20px;
+  }
+  
+  .projeto-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .projeto-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+  
+  .projeto-info h3 {
+    font-size: 20px;
+  }
+  
+  .projeto-info p {
+    font-size: 15px;
+  }
+  
+  /* Tags de tecnologia centralizadas */
+  .projeto-tech {
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .tech-tag {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  /* Contatos em coluna */
+  .contatos-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contato-item {
+    min-width: auto;
+    padding: 20px;
+  }
+  
+  /* Ícones sociais na parte inferior para mobile */
+  .social-icons {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    flex-direction: row;
+    gap: 10px;
+    z-index: 1001;
+  }
+  
+  .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .social-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* ===== MOBILE PEQUENO (320px - 479px) ===== */
+@media screen and (max-width: 479px) {
+  /* Header ainda mais compacto */
+  header {
+    padding: 5px 3%;
+  }
+  
+  /* Logo ainda menor */
+  .logo-fld {
+    width: 80px;
+  }
+  
+  .logo-tagline {
+    font-size: 10px;
+  }
+  
+  /* Navegação mais compacta */
+  nav ul {
+    gap: 10px;
+  }
+  
+  nav a {
+    font-size: 12px;
+  }
+  
+  /* Banner para telas muito pequenas */
+  .banner h1 {
+    font-size: 36px;
+  }
+  
+  .banner p {
+    font-size: 16px;
+  }
+  
+  .avatar-banner {
+    width: 120px;
+    height: 120px;
+  }
+  
+  /* Padding reduzido */
+  .sobre, .projetos, .contatos {
+    padding: 40px 2%;
+  }
+  
+  /* Títulos ainda menores */
+  .sobre h2, .projetos h2, .contatos h2 {
+    font-size: 24px;
+  }
+  
+  /* Grid de habilidades mais compacto */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+  }
+  
+  .skill-item {
+    padding: 10px 6px;
+    font-size: 12px;
+  }
+  
+  /* Projetos com texto menor */
+  .projeto-info h3 {
+    font-size: 18px;
+  }
+  
+  .projeto-info p {
+    font-size: 14px;
+  }
+  
+  .tech-tag {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+  
+  /* Ícones sociais menores */
+  .social-icons {
+    bottom: 15px;
+    gap: 8px;
+  }
+  
+  .social-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .social-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* ===== ORIENTAÇÃO LANDSCAPE EM MOBILE ===== */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  /* Banner em landscape */
+  .banner {
+    height: 100vh;
+    flex-direction: row;
+    padding: 60px 20px 0 20px;
+  }
+  
+  .avatar-banner {
+    width: 120px;
+    height: 120px;
+    margin-top: 0;
+    margin-left: 20px;
+  }
+  
+  .banner h1 {
+    font-size: 32px;
+  }
+  
+  .banner p {
+    font-size: 16px;
+  }
+}
+
+/* ===== TELAS MUITO GRANDES ===== */
+@media screen and (min-width: 1400px) {
+  /* Container com largura máxima */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Elementos maiores para telas grandes */
+  .banner h1 {
+    font-size: 72px;
+  }
+  
+  .banner p {
+    font-size: 28px;
+  }
+  
+  .avatar-banner {
+    width: 300px;
+    height: 300px;
+  }
+} 

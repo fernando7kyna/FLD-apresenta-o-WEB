@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Meta tags essenciais para SEO e responsividade -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Portfolio profissional de Fernando Lima - Desenvolvedor Full-Stack" />
+  <meta name="keywords" content="desenvolvedor, full-stack, portfolio, Fernando Lima, programação" />
+  <title>Fernando Lima - Portfolio Profissional</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body id="top">
+  <!-- Vídeo de background - Autoplay, loop e mudo para melhor performance -->
+  <video autoplay loop muted playsinline class="video-bg">
+    <source src="assets/capa.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo em background.
+  </video>
+
+  <!-- Header fixo com navegação e logo -->
+  <header>
+    <!-- Container do logo com tagline -->
+    <div class="logo-container">
+      <img src="assets/imglogo.png" alt="Logo FLD" class="logo-fld" />
+      <p class="logo-tagline">Transformando ideias em soluções digitais</p>
+    </div>
+    
+    <!-- Menu de navegação principal -->
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#top">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <!-- Menu hambúrguer para dispositivos móveis -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Seção principal do banner com apresentação -->
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Bem-vindo</h1>
+      <p>Fernando Lima - Desenvolvedor Full-Stack focado em soluções modernas</p>
+      <a href="#contato" class="btn">Fale comigo</a>
+    </div>
+    <!-- Avatar animado no banner -->
+    <img src="assets/avata.png" alt="Avatar" class="avatar-banner imagem-animada" />
+  </section>
+
+  <!-- Ícones de redes sociais fixos na lateral -->
+  <div class="social-icons">
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/fernando-fullstackdev/" target="_blank" class="social-icon linkedin">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+      </svg>
+    </a>
+    <!-- WhatsApp -->
+    <a href="https://wa.me/61993700437" target="_blank" class="social-icon whatsapp">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+      </svg>
+    </a>
+    <!-- Email -->
+    <a href="mailto:fernandolimadev17@gmail.com" class="social-icon email">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Seção Sobre - Informações pessoais e habilidades -->
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <h2>Sobre Mim</h2>
+      <div class="sobre-content">
+        <div class="sobre-texto">
+          <!-- Descrição pessoal -->
+          <p>Olá! Sou Fernando Lima, um desenvolvedor apaixonado por tecnologia e inovação. Com experiência em desenvolvimento Full-Stack, dedico-me a criar soluções digitais que fazem a diferença.</p>
+          
+          <p>Minha jornada na programação começou com a curiosidade de entender como as coisas funcionam na web. Hoje, transformo ideias em realidade através de código limpo, eficiente e escalável.</p>
+          
+          <!-- Seção de habilidades técnicas organizadas por categoria -->
+          <div class="habilidades">
+            <h3>Habilidades Técnicas</h3>
+            
+            <!-- Frontend -->
+            <div class="skills-category">
+              <h4>Frontend</h4>
+              <div class="skills-grid">
+                <div class="skill-item">HTML5</div>
+                <div class="skill-item">CSS3</div>
+                <div class="skill-item">JavaScript (ES6+)</div>
+                <div class="skill-item">Angular</div>
+                <div class="skill-item">SCSS</div>
+              </div>
+            </div>
+            
+            <!-- Backend -->
+            <div class="skills-category">
+              <h4>Backend</h4>
+              <div class="skills-grid">
+                <div class="skill-item">Node.js</div>
+                <div class="skill-item">Express.js</div>
+                <div class="skill-item">NestJS</div>
+              </div>
+            </div>
+            
+            <!-- Mobile -->
+            <div class="skills-category">
+              <h4>Mobile</h4>
+              <div class="skills-grid">
+                <div class="skill-item">Flutter 3+</div>
+                <div class="skill-item">Dart</div>
+              </div>
+            </div>
+            
+            <!-- Banco de Dados -->
+            <div class="skills-category">
+              <h4>Banco de Dados</h4>
+              <div class="skills-grid">
+                <div class="skill-item">MongoDB</div>
+                <div class="skill-item">IndexedDB</div>
+                <div class="skill-item">PostgreSQL (básico)</div>
+              </div>
+            </div>
+            
+            <!-- Outras Ferramentas -->
+            <div class="skills-category">
+              <h4>Outras Ferramentas e Tecnologias</h4>
+              <div class="skills-grid">
+                <div class="skill-item">TypeScript</div>
+                <div class="skill-item">Git</div>
+                <div class="skill-item">Swagger (documentação de API)</div>
+                <div class="skill-item">JWT (autenticação segura)</div>
+                <div class="skill-item">Figma (prototipação de UI)</div>
+              </div>
+            </div>
+            
+            <!-- Metodologias -->
+            <div class="skills-category">
+              <h4>Metodologias</h4>
+              <div class="skills-grid">
+                <div class="skill-item">Scrum</div>
+                <div class="skill-item">Kanban</div>
+                <div class="skill-item">Clean Code</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Projetos - Portfolio de trabalhos realizados -->
+  <section class="projetos" id="projetos">
+    <div class="container">
+      <h2>Meus Projetos</h2>
+      <div class="projetos-content">
+        <!-- Projeto 1: FLD Veiculos -->
+        <div class="projeto-item">
+          <div class="projeto-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <div class="projeto-info">
+            <h3>FLD Veiculos</h3>
+            <p>O FLD Veiculos é uma aplicação web front-end que simula uma plataforma de classificados de automóveis. O projeto foi criado para ser um case de portfólio, demonstrando a construção de uma interface rica, interativa e totalmente responsiva, utilizando tecnologias web fundamentais.</p>
+            <p>A aplicação oferece uma experiência de usuário fluida e moderna, desde o cadastro e login (simulados via localStorage) até a busca e filtragem de veículos em uma vitrine dinâmica, com design futurista e efeitos visuais avançados.</p>
+            <!-- Tags de tecnologias utilizadas -->
+            <div class="projeto-tech">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Responsivo</span>
+            </div>
+            <!-- Botão de acesso ao projeto -->
+            <div class="projeto-actions">
+              <a href="https://fld-veiculos-sbns.vercel.app/" target="_blank" class="btn-projeto">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                Acessar Projeto
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Projeto 2: Dashboard de Tarefas -->
+        <div class="projeto-item">
+          <div class="projeto-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <div class="projeto-info">
+            <h3>Dashboard de Tarefas</h3>
+            <p>Organize, priorize e acompanhe tarefas de forma moderna, responsiva e 100% offline ou integrada ao MySQL!</p>
+            <!-- Tags de tecnologias utilizadas -->
+            <div class="projeto-tech">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Responsivo</span>
+            </div>
+            <!-- Botão de acesso ao projeto -->
+            <div class="projeto-actions">
+              <a href="https://gerenciamento-tarefas-sql-1ync.vercel.app/login" target="_blank" class="btn-projeto">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                Acessar Projeto
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Projeto 3: Sistema de Controle de Acesso -->
+        <div class="projeto-item">
+          <div class="projeto-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <div class="projeto-info">
+            <h3>Sistema de Controle de Acesso</h3>
+            <p>Sistema desenvolvido em Flutter para controle de acesso e registro de visitantes em condomínios, com suporte para plataformas web e mobile.</p>
+            <!-- Tags de tecnologias utilizadas -->
+            <div class="projeto-tech">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Dart</span>
+              <span class="tech-tag">Web</span>
+              <span class="tech-tag">Mobile</span>
+            </div>
+            <!-- Botão de acesso ao projeto -->
+            <div class="projeto-actions">
+              <a href="https://gerenciamento-cadastro-mobile-web-b.vercel.app/" target="_blank" class="btn-projeto">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                Acessar Projeto
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Contatos - Informações de contato -->
+  <section class="contatos" id="contato">
+    <div class="container">
+      <h2>Contatos</h2>
+      <div class="contatos-content">
+        <!-- Contato telefônico -->
+        <div class="contato-item">
+          <div class="contato-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+          </div>
+          <div class="contato-info">
+            <h3>Telefone</h3>
+            <p>61-993700437</p>
+          </div>
+        </div>
+        
+        <!-- Contato por email -->
+        <div class="contato-item">
+          <div class="contato-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </div>
+          <div class="contato-info">
+            <h3>Email</h3>
+            <p>fernandolimadev17@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer com copyright -->
+  <footer>
+    <p>© 2025 Fernando Lima - Todos os direitos reservados</p>
+  </footer>
+
+  <!-- Scripts JavaScript -->
+  <script>
+    // ===== FUNCIONALIDADES DE NAVEGAÇÃO =====
+    
+    // Garante que a página sempre volte ao topo quando atualizada
+    window.onbeforeunload = function() {
+      window.scrollTo(0, 0);
+    };
+    
+    // Também garante que ao carregar a página, ela esteja no topo
+    window.onload = function() {
+      window.scrollTo(0, 0);
+    };
+    
+    // ===== MENU MOBILE (HAMBÚRGUER) =====
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.querySelector('.hamburger');
+      const navMenu = document.querySelector('.nav-menu');
+      const navLinks = document.querySelectorAll('.nav-menu a');
+      
+      // Toggle do menu hambúrguer
+      hamburger.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+      });
+      
+      // Fechar menu ao clicar em um link de navegação
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          navMenu.classList.remove('active');
+          hamburger.classList.remove('active');
+        });
+      });
+      
+      // Fechar menu ao clicar fora dele (melhora UX)
+      document.addEventListener('click', function(e) {
+        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+          navMenu.classList.remove('active');
+          hamburger.classList.remove('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html> 
