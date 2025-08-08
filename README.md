@@ -1,4 +1,4 @@
-# Portfolio Profissional - Fernando Lima
+# Portfolio Profissional de apresentação pessoal  - Fernando Lima
 
 ## 📋 Descrição
 
